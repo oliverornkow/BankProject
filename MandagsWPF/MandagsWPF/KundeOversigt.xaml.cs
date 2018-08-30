@@ -22,6 +22,8 @@ namespace MandagsWPF
     /// </summary>
     public partial class KundeOversigt : Page
     {
+        public DataView DV { get; set; }
+        
         public KundeOversigt()
         {
             InitializeComponent();
@@ -33,15 +35,37 @@ namespace MandagsWPF
         {
             String connectionString = @"Data Source=(LocalDB)\LocalDB;Initial Catalog=BGBank;Persist Security Info=True;User ID=SQLAdmin;Password=Passw0rd";
             SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("select * from Person", con);
+            SqlCommand cmd = new SqlCommand("select Fornavn, Efternavn, CPR, Oprettelsesdato, Adresse.* from Person inner join Adresse on Person.Adresse = Adresse.ID", con);
             con.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             Kundeoversigt_dataGrid.IsReadOnly = true;
             Kundeoversigt_dataGrid.ItemsSource = dt.DefaultView;
+            DV = dt.DefaultView;
+            DataContext = this;
+            
             cmd.Dispose();
             con.Close();
+        }
+
+        private void Kundeoversigt_dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid gd = (DataGrid)sender;
+            DataRowView row_selected = gd.SelectedItem as DataRowView;
+            if(row_selected != null)
+            {
+                Konto konto = new Konto();
+                konto.textBoxinthewindow.Text = row_selected["CPR"].ToString();
+                textBox.Text = row_selected["CPR"].ToString();
+                
+            }
+        }
+
+        private void Kundeoversigt_dataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Konto konti = new Konto();
+            konti.Show();
         }
     }
 }

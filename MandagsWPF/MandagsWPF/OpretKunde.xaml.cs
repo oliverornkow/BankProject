@@ -26,18 +26,18 @@ namespace MandagsWPF
         public OpretKunde()
         {
             InitializeComponent();
-            Aarstal();
+            //Aarstal();
         }
 
-        public void Aarstal()
-        {
-            for (int i = 1930; i <= 2018; i++)
-            {
-                ComboBoxItem year = new ComboBoxItem();
-                year.Content = i;
-                Aarstal_comboBox.Items.Add(year);
-            }
-        }
+        //public void Aarstal()
+        //{
+        //    for (int i = 1930; i <= 2018; i++)
+        //    {
+        //        ComboBoxItem year = new ComboBoxItem();
+        //        year.Content = i;
+        //        Aarstal_comboBox.Items.Add(year);
+        //    }
+        //}
 
         private void OpretBruger_button_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +51,7 @@ namespace MandagsWPF
             {
                 MessageBox.Show("Bruger eksistere i forvejen!");
             }
-            else if(Fornavn_textBox.Text == "" || Efternavn_textBox.Text == "" || Aarstal_comboBox.Text == "" || Adresse_textBox.Text == "" || CPR_textBox.Text == "")
+            else if(Fornavn_textBox.Text == "" || Efternavn_textBox.Text == "" /*|| Aarstal_comboBox.Text == ""*/ || Adresse_textBox.Text == "" || CPR_textBox.Text == "")
                 MessageBox.Show("Udfyld de tomme felter!");
             else
             {
@@ -62,9 +62,13 @@ namespace MandagsWPF
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@fornavn", Fornavn_textBox.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@efternavn", Efternavn_textBox.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@aarstal", Aarstal_comboBox.Text.Trim());
+                    //sqlCmd.Parameters.AddWithValue("@aarstal", Aarstal_comboBox.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@adresse", Adresse_textBox.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@cpr", CPR_textBox.Text.Trim());
+
+                    sqlCmd.Parameters.AddWithValue("@Etage", Etage_textBox.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@PostNr", PostNr_textBox.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@By", By_textBox.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Kunden er nu registreret!");
                     sqlCon.Close();

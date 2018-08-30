@@ -17,6 +17,8 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Kundeoversigt_text" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32"/>
-        <DataGrid x:Name="Kundeoversigt_dataGrid" Grid.Row="1"/>
+        <DataGrid x:Name="Kundeoversigt_dataGrid" Grid.Row="1" SelectionChanged="Kundeoversigt_dataGrid_SelectionChanged" MouseDoubleClick="Kundeoversigt_dataGrid_MouseDoubleClick" ItemsSource="{Binding DV}" IsSynchronizedWithCurrentItem="True" />
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="194,237.4,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Page>

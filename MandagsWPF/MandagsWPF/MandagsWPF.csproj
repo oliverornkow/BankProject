@@ -54,12 +54,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Konto.xaml.cs">
+      <DependentUpon>Konto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kundeoplysninger.xaml.cs">
+      <DependentUpon>Kundeoplysninger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="KundeOversigt.xaml.cs">
       <DependentUpon>KundeOversigt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OpretKunde2.xaml.cs">
+      <DependentUpon>OpretKunde2.xaml</DependentUpon>
     </Compile>
     <Compile Include="SletKunde.xaml.cs">
       <DependentUpon>SletKunde.xaml</DependentUpon>
     </Compile>
+    <Page Include="Konto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kundeoplysninger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="KundeOversigt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +94,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="OpretKunde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OpretKunde2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
