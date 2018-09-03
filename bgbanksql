@@ -13,6 +13,12 @@ drop table Adresse
 end
 go
 
+if exists(select * from sys.tables where name = 'Konto')
+begin
+drop table Konto
+end
+go
+
 create table Adresse(
 ID int identity(1,1) primary key,
 Adresse nvarchar(255),
@@ -32,14 +38,13 @@ ADRESSE int foreign key references Adresse(ID)
 );
 go
 
-create table Konti (
+create table Konto (
 KontoNr int identity (1,1) primary key,
 Rente float,
 Saldo float,
 Oprettelsesdato date,
 KundeID int foreign key references Person(CPR)
 );
-
 
 
 
@@ -50,10 +55,10 @@ Insert into Person (Oprettelsesdato, Fornavn, Efternavn, Adresse, CPR)
 Values(Getdate(), 'Oliver', 'Ørnkow', 1, 1111);
 
 Insert into Konti (Oprettelsesdato, Rente, Saldo, KundeID)
-Values(GETDATE(), 2.5, 10000.5, 1);
+Values(GETDATE(), 2.5, 10000.5, 1111);
 
-Select * from Person
 
-Select * from Adresse
 
-Select * from Konti
+Select Fornavn, Efternavn, CPR, Oprettelsesdato, Adresse.Adresse, Adresse.Etage, Adresse.PostNr, [By]
+from Person
+inner join Adresse on Person.Adresse = Adresse.ID

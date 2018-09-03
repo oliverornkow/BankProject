@@ -19,15 +19,22 @@
         <TextBlock Text="OpretKunde" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32"/>
         <Label x:Name="Fornavn" Content="Fornavn:" HorizontalAlignment="Left" Margin="100,50,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16"/>
         <Label x:Name="Efternavn" Content="Efternavn:" HorizontalAlignment="Left" Margin="100,80,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="Årstal" Content="Årstal:" HorizontalAlignment="Left" Margin="100,110,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16"/>
         <Label x:Name="Adresse" Content="Adresse:" HorizontalAlignment="Left" Margin="100,140,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16"/>
         <Label x:Name="Cpr" Content="CPR:" HorizontalAlignment="Left" Margin="100,170,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="Fornavn_textBox" HorizontalAlignment="Left" Height="23" Margin="190,55,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Efternavn_textBox" HorizontalAlignment="Left" Height="23" Margin="190,85,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="Aarstal_comboBox" HorizontalAlignment="Left" Margin="190,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Adresse_textBox" HorizontalAlignment="Left" Height="23" Margin="190,145,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="CPR_textBox" HorizontalAlignment="Left" Height="23" Margin="190,175,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="OpretBruger_button" Content="Opret Kunde" HorizontalAlignment="Left" Margin="235,210,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="OpretBruger_button_Click"/>
         
+        <TextBox x:Name="CPR_textBox" HorizontalAlignment="Left" Height="23" Margin="190,175,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="OpretBruger_button" Content="Næste" HorizontalAlignment="Left" Margin="235,210,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="OpretBruger_button_Click"/>
+        <Label x:Name="label" Content="Step 1 af 2" HorizontalAlignment="Left" Margin="142,267.4,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="label_Copy" Content="Adresse" HorizontalAlignment="Left" Margin="383,55.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="label_Copy1" Content="Etage" HorizontalAlignment="Left" Margin="383,82.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="label_Copy2" Content="PostNr" HorizontalAlignment="Left" Margin="383,112.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="label_Copy3" Content="By" HorizontalAlignment="Left" Margin="383,140.4,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox x:Name="Adresse_textBox" HorizontalAlignment="Left" Height="23" Margin="449,57.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="Etage_textBox" HorizontalAlignment="Left" Height="23" Margin="449,85.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="PostNr_textBox" HorizontalAlignment="Left" Height="23" Margin="449,112.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="By_textBox" HorizontalAlignment="Left" Height="23" Margin="449,139.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+
     </Grid>
 </Page>
