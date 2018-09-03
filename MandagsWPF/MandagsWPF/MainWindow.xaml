@@ -15,10 +15,10 @@
             <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
-        <!--<Label x:Name="label" Content="Bruger Administration" HorizontalAlignment="Left" Margin="38,71,0,0" VerticalAlignment="Top"/>
+        <!--Label x:Name="label" Content="Bruger Administration" HorizontalAlignment="Left" Margin="38,71,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Opret Kunde" HorizontalAlignment="Left" Margin="38,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Click="button_Click"/>
         <Button x:Name="button_Copy" Content="Slet Kunde" HorizontalAlignment="Left" Margin="38,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Click="button_Click"/>
-        <Button x:Name="button_Copy1" Content="Kundeoversigt" HorizontalAlignment="Left" Margin="38,57,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Click="button_Click"/>-->
+        <Button x:Name="button_Copy1" Content="Kundeoversigt" HorizontalAlignment="Left" Margin="38,57,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Click="button_Click"-->
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Button Content="Opret Kunde" Margin="5,70,0,0" Click="OpretKunde" Background="#FF54BC1C" />
             <Button Content="Slet Kunde"  Margin="5,10,0,0"  Click="SletKunde"  Background="#FFD30F0F"/>
