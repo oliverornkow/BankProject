@@ -58,6 +58,7 @@ namespace MandagsWPF
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
+                    SqlCommand PNInsert = new SqlCommand("Add_Data");
                     SqlCommand sqlCmd = new SqlCommand("Add_Data", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@fornavn", Fornavn_textBox.Text.Trim());
@@ -66,9 +67,9 @@ namespace MandagsWPF
                     sqlCmd.Parameters.AddWithValue("@adresse", Adresse_textBox.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@cpr", CPR_textBox.Text.Trim());
 
-                    sqlCmd.Parameters.AddWithValue("@Etage", Etage_textBox.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@PostNr", PostNr_textBox.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@By", By_textBox.Text.Trim());
+                    //sqlCmd.Parameters.AddWithValue("@etage", Etage_textBox.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@postnr", PostNr_textBox.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@by", By_textBox.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Kunden er nu registreret!");
                     sqlCon.Close();

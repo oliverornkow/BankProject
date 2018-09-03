@@ -35,15 +35,15 @@ namespace MandagsWPF
         {
             String connectionString = @"Data Source=(LocalDB)\LocalDB;Initial Catalog=BGBank;Persist Security Info=True;User ID=SQLAdmin;Password=Passw0rd";
             SqlConnection con = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand("select Fornavn, Efternavn, CPR, Oprettelsesdato, Adresse.* from Person inner join Adresse on Person.Adresse = Adresse.ID", con);
+            SqlCommand cmd = new SqlCommand("select fornavn, efternavn, oprettelsesdato, adresse, cpr, adresse.* from Person inner join Adresse on Person.PostNr = Adresse.PostNr", con);
             con.Open();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             Kundeoversigt_dataGrid.IsReadOnly = true;
             Kundeoversigt_dataGrid.ItemsSource = dt.DefaultView;
-            DV = dt.DefaultView;
-            DataContext = this;
+            //DV = dt.DefaultView;
+            //DataContext = this;
             
             cmd.Dispose();
             con.Close();
