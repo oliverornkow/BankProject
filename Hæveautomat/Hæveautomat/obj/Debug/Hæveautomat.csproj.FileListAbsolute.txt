@@ -1,0 +1,17 @@
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\bin\Debug\Hæveautomat.exe.config
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\bin\Debug\Hæveautomat.exe
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\bin\Debug\Hæveautomat.pdb
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.csprojAssemblyReference.cache
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\HævEllerIndest.g.cs
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\MainWindow.g.cs
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\App.g.cs
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat_MarkupCompile.cache
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat_MarkupCompile.lref
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\HævEllerIndest.baml
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\MainWindow.baml
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.g.resources
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.Properties.Resources.resources
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.csproj.GenerateResource.cache
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.csproj.CoreCompileInputs.cache
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.exe
+C:\Users\Tec\source\repos\Hæveautomat\Hæveautomat\obj\Debug\Hæveautomat.pdb
