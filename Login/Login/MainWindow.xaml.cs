@@ -29,29 +29,30 @@ namespace Login
 
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            string Password = Password_Textbox.Password;
+            string Password = Password_PasswordBox.Password;
 
             List<SqlParameter> sqlParams = new List<SqlParameter>();
-            sqlParams.Add(new SqlParameter("Brugernavn", Brugernavn_Textbox.Text));
+            sqlParams.Add(new SqlParameter("CPR_Nummer", Brugernavn_Textbox.Text));
             sqlParams.Add(new SqlParameter("Password", Password));
-            sqlParams.Add(new SqlParameter("Bruger_Type", BrugerType_Combobox.SelectionBoxItem.ToString()));
 
-            DataTable dtLoginResults = DAL.ExecSP("ValidateLogin", sqlParams);
+            List<SqlParameter> sqlParams2 = new List<SqlParameter>();
+            sqlParams2.Add(new SqlParameter("CPR_Nummer", Brugernavn_Textbox.Text));
+            sqlParams2.Add(new SqlParameter("Password", Password));
 
-            if (dtLoginResults.Rows.Count == 1)
+            DataTable dtLoginResultsAdmin = DAL.ExecSP("ValidateLoginAdmin", sqlParams);
+            DataTable dtLoginResultsKunde = DAL.ExecSP("ValidateLoginKunde", sqlParams2);
+
+            if (dtLoginResultsAdmin.Rows.Count == 1)
             {
-                if (BrugerType_Combobox.SelectionBoxItem.ToString() == "Admin")
-                {
-                    AdminWindow win2 = new AdminWindow();
-                    win2.Show();
-                    this.Close();
-                }
-                else if (BrugerType_Combobox.SelectionBoxItem.ToString() == "Kunde")
-                {
-                    KundeWindow win2 = new KundeWindow();
-                    win2.Show();
-                    this.Close();
-                }
+                AdminWindow win2 = new AdminWindow();
+                win2.Show();
+                this.Close();
+            }
+            else if (dtLoginResultsKunde.Rows.Count == 1)
+            {
+                KundeWindow win2 = new KundeWindow();
+                win2.Show();
+                this.Close();
             }
             else
             {
