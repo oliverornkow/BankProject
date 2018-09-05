@@ -8,17 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,-4,-0.4,4">
         <TextBlock HorizontalAlignment="Left" Margin="80,20,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" FontSize="36"/>
-        <TextBlock x:Name="Brugernavn_Textblock" HorizontalAlignment="Left" Margin="80,160,0,0" TextWrapping="Wrap" Text="Brugernavn:" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <TextBlock x:Name="Brugernavn_Textblock" HorizontalAlignment="Left" Margin="80,160,0,0" TextWrapping="Wrap" Text="CPR Nummer:" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <TextBlock x:Name="Password_Textblock" HorizontalAlignment="Left" Margin="80,200,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <!--<TextBlock x:Name="BrugerType_Textblock" HorizontalAlignment="Left" Margin="80,240,0,0" TextWrapping="Wrap" Text="Bruger Type:" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>-->
-        <TextBox x:Name="Brugernavn_Textbox" HorizontalAlignment="Left" Width="250" Height="25" Margin="210,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
-        <!--<TextBox x:Name="Password_Textbox" HorizontalAlignment="Left" Width="250" Height="25" Margin="210,200,0,0" TextWrapping="Wrap" Text="Indtast Password..." VerticalAlignment="Top" FontSize="20" TextBlock.FontStyle="Italic" TextChanged="Password_Textbox_TextChanged"/>-->
-        <PasswordBox x:Name="Password_PasswordBox" Height="25" Width="250" HorizontalAlignment="Left" Margin="210,200,0,0" VerticalAlignment="Top" PasswordChar="*" FontSize="20"/>
-        <!--<ComboBox x:Name="BrugerType_Combobox" HorizontalAlignment="Left" Margin="210,242.5,0,0" VerticalAlignment="Top" Width="120" FontSize="16">
-            <ComboBoxItem IsSelected="True">Kunde</ComboBoxItem>
-            <ComboBoxItem>Admin</ComboBoxItem>
-        </ComboBox>-->
-        <Button IsDefault="True" x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="80,300,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="20" FontWeight="Bold" Click="Login_Button_Click"/>
-
+        <TextBox x:Name="Brugernavn_Textbox" HorizontalAlignment="Left" Width="250" Height="25" Margin="225,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20"/>
+        <PasswordBox x:Name="Password_PasswordBox" Height="25" Width="250" HorizontalAlignment="Left" Margin="225,202,0,0" VerticalAlignment="Top" PasswordChar="*" FontSize="20"/>
+        <Button IsDefault="True" x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="80,240,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="20" FontWeight="Bold" Click="Login_Button_Click"/>
     </Grid>
 </Window>
